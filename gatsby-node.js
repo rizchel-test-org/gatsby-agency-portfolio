@@ -7,6 +7,7 @@ require('dotenv').config();
 exports.onCreatePage = ({ page, actions }) => {
   const { createPage, deletePage } = actions
   const pageContext = {
+    writeKey: `${process.env.COSMIC_WRITE_KEY}`,
     readKey: `${process.env.COSMIC_READ_KEY}`,
     cosmicBucket: `${process.env.COSMIC_BUCKET_SLUG}`,
   }
